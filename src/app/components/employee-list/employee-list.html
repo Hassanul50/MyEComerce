@@ -1,0 +1,36 @@
+<p>employee-list works!</p>
+
+<div>
+    <select name="" id="">
+        <option *ngFor="let emp of employeeslist" [value]="emp.emoId">{{emp.name}}</option>
+    </select>
+</div>
+
+<div class="row">
+    <div class="col-5">
+      <table>
+   <thead>    
+  <tr>
+    <th>Sl_no</th>
+    <th>empId</th>
+    <th>name</th>
+    <th>position</th>
+    <th>department</th>
+    <th>phone</th>
+  </tr>
+  </thead> 
+  <tbody>  
+    <tr *ngFor="let emplist of employeeslist,let slNo=index" >
+    <td>{{slNo}}</td>
+    <td>{{emplist.emoId}}</td>
+    <td>{{emplist.name}}</td>
+    <td>{{emplist.position}}</td>
+    <td>{{emplist.department}}</td>
+    <td>{{emplist.phone}}</td>
+  </tr>
+  </tbody>
+
+</table>
+      
+    </div>
+</div>

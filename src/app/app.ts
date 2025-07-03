@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { AddEmployee } from "./components/add-employee/add-employee";
+import { EmployeeList } from "./components/employee-list/employee-list";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
