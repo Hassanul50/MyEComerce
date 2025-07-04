@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { EmployeeList } from './components/employee-list/employee-list';
 import { AddEmployee } from './components/add-employee/add-employee';
 import { Signal } from './components/signal/signal';
+import { TemplateForm } from './components/template-form/template-form';
 
 export const routes: Routes = [
 
@@ -21,5 +22,9 @@ export const routes: Routes = [
      {
         path:'signal',
         component:Signal
+    },
+    {
+        path:'template-form',
+        component:TemplateForm
     }
 ];
