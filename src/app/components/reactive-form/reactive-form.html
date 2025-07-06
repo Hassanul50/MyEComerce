@@ -1,0 +1,61 @@
+<h2 class="text-center"> Template form</h2>
+<form class="row g-3" [formGroup] ="userForm" (ngSubmit)="onSave()">
+  <div class="col-md-6">
+    <label  >FirstName</label>
+    <input type="text" name="firstName" formControlName="firstName" required class="form-control" id="FirstName">
+    
+  </div>
+  <div class="col-md-6">
+    <label  >LastName</label>
+    <input type="text" name="lastName" formControlName="lastName" class="form-control" id="inputlastName">
+    
+  </div>
+   <div class="col-md-12">
+    <label  >UserName</label>
+    <input type="text" name="userName" formControlName="userName" class="form-control" id="inputUserName">
+  </div>
+  <!-- <div class="col-md-6">
+    <label >Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label  >Password</label>
+    <input type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label >Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label  >Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div> -->
+  <div class="col-md-6">
+    <label  >City</label>
+    <input type="text" name="city" formControlName="city" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label >State</label>
+    <select id="inputState" name="state" formControlName="state"  class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label  >ZipCode</label>
+    <input type="text" name="zipcode" formControlName="zipcode" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" name="isTermAgree" formControlName="isTermAgree"  type="checkbox" id="gridCheck">
+      <label>
+        Agree Term 
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit"  class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+
+

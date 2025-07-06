@@ -3,6 +3,7 @@ import { EmployeeList } from './components/employee-list/employee-list';
 import { AddEmployee } from './components/add-employee/add-employee';
 import { Signal } from './components/signal/signal';
 import { TemplateForm } from './components/template-form/template-form';
+import { ReactiveForm } from './components/reactive-form/reactive-form';
 
 export const routes: Routes = [
 
@@ -26,5 +27,10 @@ export const routes: Routes = [
     {
         path:'template-form',
         component:TemplateForm
+    },
+    {
+        path:"reactive",
+        component:ReactiveForm
+
     }
 ];
