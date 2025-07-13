@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -9,17 +9,21 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class ReactiveForm {
 
+   isValid:boolean=false;
+  
   userForm:FormGroup=new FormGroup({
 
-    firstName:new FormControl(""),
-    lastName:new FormControl(""),
+    firstName:new FormControl("",[Validators.required]),
+    lastName:new FormControl("",[Validators.required,Validators.minLength(4)]),
     userName:new FormControl(""),
     city: new FormControl(""),
     state:new FormControl(""),
     zipcode :new FormControl(""),
     isTermAgree:new FormControl(false)
   })
-
+  constructor(){
+   this.isValid=this.userForm.valid;
+ }
   onSave(){
     const formValue=this.userForm.value;
   }
